@@ -28,4 +28,6 @@ int main()
     cout << to_camel_case("The-Stealth-Warrior") << endl;
     cout << to_camel_case("the_stealth_warrior") << endl;
     cout << to_camel_case("A-B-C") << endl;
+    
+    return 0;
 }
