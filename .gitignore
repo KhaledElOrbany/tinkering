@@ -1,2 +1,3 @@
 .vscode
 cpp/*/source
+react/*/node_modules
