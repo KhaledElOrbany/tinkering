@@ -10,8 +10,6 @@ const cakeSlice = createSlice({
     order: (state, { payload }) => {
       if (state.numOfCakes > 0) {
         state.numOfCakes -= payload.quantity;
-
-        // dispatch(orderIcecream({ quantity: (payload.quantity % 2) }));
       }
     },
     restock: (state, { payload }) => {
