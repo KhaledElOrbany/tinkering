@@ -1,15 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  numOfCakes: 10,
-}
-
 const cakeSlice = createSlice({
   name: 'cake',
-  initialState,
+  initialState: {
+    numOfCakes: 10,
+    icecreamQuantity: 0,
+  },
   reducers: {
     order: (state, { payload }) => {
-      state.numOfCakes = state.numOfCakes - payload.quantity;
+      if (state.numOfCakes > 0) {
+        state.numOfCakes -= payload.quantity;
+
+        // dispatch(orderIcecream({ quantity: (payload.quantity % 2) }));
+      }
     },
     restock: (state, { payload }) => {
       state.numOfCakes += payload.quantity;
